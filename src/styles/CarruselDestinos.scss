@@ -1,0 +1,50 @@
+@import './variables.scss';
+
+.carrusel-destinos {
+  padding: 3rem 2rem;
+  text-align: center;
+  background-color: #f9f9f9;
+
+  h2 {
+    font-size: 2.5rem;
+    color: $primary-color;
+    margin-bottom: 2rem;
+  }
+
+  .card-destino {
+    margin: 0 10px;
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+    transition: transform 0.3s ease;
+    cursor: pointer;
+
+    &:hover {
+      transform: translateY(-6px);
+    }
+
+    .card-imagen {
+      background-size: cover;
+      background-position: center;
+      height: 300px;
+      display: flex;
+      align-items: flex-start;
+      justify-content: center;
+      position: relative;
+
+      .card-nombre {
+        background-color: rgba(0, 0, 0, 0.5);
+        color: white;
+        padding: 0.5rem 1rem;
+        font-size: 1.3rem;
+        font-weight: bold;
+        border-radius: 0 0 12px 12px;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        text-align: center;
+      }
+    }
+  }
+}

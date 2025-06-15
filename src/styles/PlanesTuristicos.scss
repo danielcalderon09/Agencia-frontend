@@ -1,0 +1,19 @@
+@import './variables.scss';
+
+.planes {
+  padding: 3rem 2rem;
+  text-align: center;
+  background: #f9f9f9;
+
+  h2 {
+    font-size: 2.5rem;
+    margin-bottom: 2rem;
+    color: $primary-color;
+  }
+
+  .planes-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 2rem;
+  }
+}

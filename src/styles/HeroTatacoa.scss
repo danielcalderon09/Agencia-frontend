@@ -1,0 +1,44 @@
+@import './variables.scss';
+
+.hero-tatacoa {
+  height: 85vh;
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  .overlay {
+    background-color: rgba(0, 0, 0, 0.5);
+    color: $text-color;
+    text-align: center;
+    padding: 2rem;
+    border-radius: 12px;
+
+    h1 {
+      font-size: 3rem;
+      margin-bottom: 1rem;
+    }
+
+    p {
+      font-size: 1.2rem;
+      margin-bottom: 2rem;
+    }
+
+    button {
+      background: $accent-color;
+      color: $primary-color;
+      padding: 0.8rem 1.6rem;
+      border: none;
+      border-radius: 8px;
+      font-weight: bold;
+      cursor: pointer;
+      transition: background 0.3s;
+
+      &:hover {
+        background: darken($accent-color, 10%);
+      }
+    }
+  }
+}

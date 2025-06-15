@@ -1,0 +1,33 @@
+@import './variables.scss';
+@import './mixins';
+
+.hero {
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 80vh;
+  position: relative;
+  transition: background-image 1s ease-in-out;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  padding-bottom: 4rem;
+
+  .hero-boton {
+    button {
+      background: $accent-color;
+      color: $primary-color;
+      border: none;
+      padding: 0.8rem 1.5rem;
+      border-radius: 8px;
+      font-weight: bold;
+      cursor: pointer;
+      transition: 0.3s;
+      font-size: 1.1rem;
+
+      &:hover {
+        background: darken($accent-color, 10%);
+      }
+    }
+  }
+}

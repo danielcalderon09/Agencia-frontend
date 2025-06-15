@@ -1,0 +1,18 @@
+@import './variables';
+@import './mixins';
+
+body {
+  margin: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background-color: #f8f8f8;
+  color: $text-color;
+   // Mostrar siempre el scroll solo en pantallas grandes
+  @media (min-width: 768px) {
+    overflow-y: scroll;
+  }
+
+  // En móviles, permitir comportamiento natural (solo si hay contenido)
+  @media (max-width: 767px) {
+    overflow-y: auto;
+  }
+}

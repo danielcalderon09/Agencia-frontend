@@ -1,0 +1,33 @@
+@import './variables.scss';
+
+.cta-final {
+  background: linear-gradient(to right, $primary-color, darken($primary-color, 10%));
+  color: white;
+  text-align: center;
+  padding: 3rem 2rem;
+
+  h2 {
+    font-size: 2.2rem;
+    margin-bottom: 1rem;
+  }
+
+  p {
+    font-size: 1.1rem;
+    margin-bottom: 2rem;
+  }
+
+  button {
+    background: $accent-color;
+    color: $primary-color;
+    padding: 0.8rem 1.5rem;
+    border: none;
+    border-radius: 8px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background 0.3s;
+
+    &:hover {
+      background: darken($accent-color, 10%);
+    }
+  }
+}

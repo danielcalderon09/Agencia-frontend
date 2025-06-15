@@ -1,0 +1,31 @@
+@import './variables.scss';
+
+.por-que {
+  background-color: #f9f9f9;
+  padding: 4rem 2rem;
+  text-align: center;
+
+  h2 {
+    font-size: 2.4rem;
+    color: $primary-color;
+    margin-bottom: 2rem;
+  }
+
+  .razones {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 2rem;
+    max-width: 1000px;
+    margin: 0 auto;
+
+    .razon {
+      background: white;
+      border-radius: 12px;
+      padding: 1.5rem;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+      font-size: 1.1rem;
+      font-weight: 500;
+      color: #333;
+    }
+  }
+}

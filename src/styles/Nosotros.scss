@@ -1,0 +1,84 @@
+@import './variables.scss';
+
+.nosotros-bloque {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  padding: 4rem 2rem;
+  background: #ffffff;
+  align-items: center;
+  justify-content: center;
+
+  .fotos {
+    flex: 1 1 500px;
+  }
+
+  .info {
+    flex: 1 1 400px;
+    text-align: left;
+  
+    h2 {
+      font-size: 2.8rem;
+      color: #000000; // <- negro
+      margin-bottom: 0.5rem;
+    }
+  
+    h4 {
+      font-size: 1.4rem;
+      color: #000000; // <- negro
+      margin-bottom: 1rem;
+    }
+  
+    p {
+      font-size: 1.1rem;
+      line-height: 1.6;
+      margin-bottom: 1rem;
+      color: #000000; // <- negro
+    }
+  
+    button {
+      padding: 0.6rem 1.2rem;
+      background: transparent;
+      border: 2px solid $accent-color;
+      border-radius: 30px;
+      font-weight: bold;
+      color: $accent-color;
+      cursor: pointer;
+  
+      &:hover {
+        background: $accent-color;
+        color: white;
+      }
+    }
+  }
+  
+}
+
+.nosotros-mision-vision {
+  display: flex;
+  flex-wrap: wrap;
+  min-height: 80vh;
+
+  .bloque-texto {
+    flex: 1 1 50%;
+    background: $primary-color;
+    color: white;
+    padding: 4rem;
+
+    h2 {
+      font-size: 4rem;
+      font-weight: bold;
+      margin-bottom: 2rem;
+    }
+
+    p {
+      font-size: 1.2rem;
+      line-height: 1.6;
+    }
+  }
+
+  .bloque-imagen {
+    flex: 1 1 50%;
+    background: url('../assets/nosotros/familia-playa.jpg') center/cover no-repeat;
+  }
+}
