@@ -1,31 +1,79 @@
-@import './variables.scss';
+.seccion-porque {
+  background: #f9f9f9;
+  padding: 1rem 2rem;
 
-.por-que {
-  background-color: #f9f9f9;
-  padding: 4rem 2rem;
-  text-align: center;
-
-  h2 {
-    font-size: 2.4rem;
-    color: $primary-color;
-    margin-bottom: 2rem;
-  }
-
-  .razones {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-    gap: 2rem;
-    max-width: 1000px;
+  .contenedor {
+    max-width: 1200px;
     margin: 0 auto;
 
-    .razon {
-      background: white;
-      border-radius: 12px;
-      padding: 1.5rem;
-      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
-      font-size: 1.1rem;
-      font-weight: 500;
-      color: #333;
+    .titulo-principal {
+      font-size: 2.8rem;
+      text-align: center;
+      color: #222;
+      margin-bottom: 1rem;
+    }
+
+    .descripcion-principal {
+      font-size: 1.2rem;
+      text-align: center;
+      color: #666;
+      max-width: 700px;
+      margin: 0 auto 4rem auto;
+    }
+
+    .razones-lista {
+      display: flex;
+      flex-direction: column;
+      gap: 4rem;
+
+      .razon {
+        display: flex;
+        align-items: center;
+        gap: 2rem;
+
+        &.invertida {
+          flex-direction: row-reverse;
+        }
+
+        .razon-imagen {
+          flex: 1;
+
+          // Para videos y/o imágenes
+          img,
+          video {
+            width: 100%;
+            height: 300px;
+            object-fit: cover;
+            border-radius: 16px;
+            box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+            display: block;
+          }
+        }
+
+        .razon-texto {
+          flex: 1;
+
+          h3 {
+            font-size: 1.8rem;
+            color: #222;
+            margin-bottom: 0.5rem;
+          }
+
+          .linea {
+            width: 60px;
+            height: 3px;
+            background: #d59d2a;
+            margin-bottom: 1rem;
+            display: block;
+          }
+
+          p {
+            font-size: 1.05rem;
+            color: #555;
+            line-height: 1.7;
+          }
+        }
+      }
     }
   }
 }

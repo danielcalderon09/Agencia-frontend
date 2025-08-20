@@ -1,0 +1,113 @@
+.habitaciones-colonial {
+  padding: 5rem 2rem;
+  background: #fdf9f5;
+
+  .titulo {
+    text-align: center;
+    font-size: 3rem;
+    font-family: 'Playfair Display', serif;
+    font-weight: 700;
+    color: #5a3e2b;
+    margin-bottom: 3rem;
+  }
+
+  .habitacion-slide {
+    display: flex;
+    flex-direction: column;
+    background: #fff;
+    border-radius: 20px;
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    max-width: 1200px;
+    margin: 0 auto;
+
+    @media (min-width: 768px) {
+      flex-direction: row;
+    }
+
+    .img-wrapper {
+      flex: 0 0 60%; // Imagen ahora ocupa 60%
+      max-height: 460px;
+
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        display: block;
+      }
+    }
+
+    .info {
+      flex: 0 0 40%;
+      padding: 2.5rem;
+      background: #fffaf4;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+
+      h3 {
+        font-size: 2rem;
+        font-family: 'Playfair Display', serif;
+        color: #5a3e2b;
+        margin-bottom: 1rem;
+      }
+
+      .descripcion {
+        font-size: 1.1rem;
+        line-height: 1.7;
+        color: #333;
+        margin-bottom: 1.5rem;
+      }
+
+      .comodidades {
+        display: flex;
+        gap: 1.5rem;
+        margin-bottom: 2rem;
+
+        span {
+          display: flex;
+          align-items: center;
+          gap: 0.5rem;
+          font-size: 1rem;
+          color: #5a3e2b;
+        }
+
+        svg {
+          font-size: 1.2rem;
+        }
+
+        small {
+          font-family: 'Poppins', sans-serif;
+        }
+      }
+
+      .btn-reservar {
+        align-self: start;
+        background: #a8652d;
+        color: white;
+        padding: 0.75rem 1.8rem;
+        border: none;
+        border-radius: 6px;
+        font-size: 1rem;
+        font-weight: 600;
+        font-family: 'Poppins', sans-serif;
+        box-shadow: 0 6px 16px rgba(0, 0, 0, 0.2);
+        cursor: pointer;
+        transition: background 0.3s ease;
+
+        &:hover {
+          background: darken(#a8652d, 10%);
+          transform: scale(1.05);
+        }
+      }
+    }
+  }
+
+  .swiper-pagination-bullet {
+    background: #bbb;
+
+    &-active {
+      background: #a8652d;
+    }
+  }
+}

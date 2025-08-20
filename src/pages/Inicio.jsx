@@ -1,9 +1,13 @@
 import Navbar from "../components/Navbar";
-import Hero from "../components/Hero";
-import CarruselDestinos from "../components/CarruselDestinos";
 import Footer from "../components/Footer";
-import PageWrapper from "../components/PageWrapper";
+import Hero from "../components/Hero";
+import SeccionPorQue from "../components/SeccionPorQue";
+import CarruselDestinos from "../components/CarruselDestinos";
 import CarruselTestimonios from "../components/CarruselTestimonios";
+import CtaFinal from "../components/CtaFinal";
+import PageWrapper from "../components/PageWrapper";
+import { motion } from "framer-motion";
+import SeAfiliado from "../components/SeAfiliado";
 
 export default function Inicio() {
   return (
@@ -11,8 +15,26 @@ export default function Inicio() {
       <Navbar />
       <PageWrapper>
         <Hero />
-        <CarruselDestinos />
-        <CarruselTestimonios/>
+
+        <motion.div initial={{ opacity: 0, y: 30 }} whileInView={{ opacity: 1, y: 0 }} transition={{ duration: 0.5 }}>
+          <SeccionPorQue />
+        </motion.div>
+
+        <motion.div initial={{ opacity: 0, y: 30 }} whileInView={{ opacity: 1, y: 0 }} transition={{ duration: 0.5 }}>
+          <CarruselDestinos />
+        </motion.div>
+
+        <motion.div initial={{ opacity: 0, y: 30 }} whileInView={{ opacity: 1, y: 0 }} transition={{ duration: 0.5 }}>
+          <SeAfiliado />
+        </motion.div>
+
+        <motion.div initial={{ opacity: 0, y: 30 }} whileInView={{ opacity: 1, y: 0 }} transition={{ duration: 0.5 }}>
+          <CarruselTestimonios />
+        </motion.div>
+
+        <motion.div initial={{ opacity: 0, y: 30 }} whileInView={{ opacity: 1, y: 0 }} transition={{ duration: 0.5 }}>
+          <CtaFinal />
+        </motion.div>
       </PageWrapper>
       <Footer />
     </>

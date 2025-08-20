@@ -1,0 +1,92 @@
+@import '../variables';
+
+.mision-vision {
+  padding: 3rem 0;
+  background: linear-gradient(to bottom, #f5f7fa 0%, #e8edf3 100%);
+  position: relative;
+
+  .slide {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 3rem 1.5rem;
+
+    @media (min-width: 768px) {
+      flex-direction: row;
+      text-align: left;
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 4rem 3rem;
+    }
+
+    .imagen {
+      flex: 1;
+      background-size: cover;
+      background-position: center;
+      height: 260px;
+      width: 100%;
+      border-radius: 20px;
+      box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
+      margin-bottom: 2rem;
+      transition: transform 0.4s ease;
+
+      @media (min-width: 768px) {
+        height: 320px;
+        margin-bottom: 0;
+        margin-right: 2.5rem;
+      }
+
+      &:hover {
+        transform: scale(1.02);
+      }
+    }
+
+    .contenido {
+      flex: 1;
+
+      h2 {
+        font-size: 2.4rem;
+        color: $primary-color;
+        margin-bottom: 1rem;
+        position: relative;
+
+        &::after {
+          content: '';
+          display: block;
+          width: 60px;
+          height: 4px;
+          background-color: $accent-color;
+          margin-top: 0.5rem;
+        }
+      }
+
+      p {
+        font-size: 1.15rem;
+        line-height: 1.8;
+        color: #333;
+        max-width: 600px;
+      }
+    }
+  }
+
+  // Swiper pagination
+  .swiper-pagination {
+    margin-top: 2rem;
+    text-align: center;
+  }
+
+  .swiper-pagination-bullet {
+    background: #aaa;
+    opacity: 1;
+    width: 12px;
+    height: 12px;
+    margin: 0 6px !important;
+    transition: all 0.3s ease;
+
+    &-active {
+      background: $accent-color;
+      transform: scale(1.2);
+    }
+  }
+}

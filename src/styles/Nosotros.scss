@@ -1,84 +1,144 @@
-@import './variables.scss';
+.nosotros-hero {
+  .slide {
+    position: relative;
+    height: 80vh;
+    background-size: cover;
+    background-position: center;
 
-.nosotros-bloque {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 2rem;
-  padding: 4rem 2rem;
-  background: #ffffff;
-  align-items: center;
-  justify-content: center;
+    .overlay {
+      background-color: rgba(0, 0, 0, 0.5);
+      color: white;
+      padding: 3rem 2rem;
+      text-align: center;
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
 
-  .fotos {
-    flex: 1 1 500px;
-  }
+      h1 {
+        font-size: 3rem;
+        font-weight: bold;
+        margin-bottom: 1rem;
+      }
 
-  .info {
-    flex: 1 1 400px;
-    text-align: left;
-  
-    h2 {
-      font-size: 2.8rem;
-      color: #000000; // <- negro
-      margin-bottom: 0.5rem;
-    }
-  
-    h4 {
-      font-size: 1.4rem;
-      color: #000000; // <- negro
-      margin-bottom: 1rem;
-    }
-  
-    p {
-      font-size: 1.1rem;
-      line-height: 1.6;
-      margin-bottom: 1rem;
-      color: #000000; // <- negro
-    }
-  
-    button {
-      padding: 0.6rem 1.2rem;
-      background: transparent;
-      border: 2px solid $accent-color;
-      border-radius: 30px;
-      font-weight: bold;
-      color: $accent-color;
-      cursor: pointer;
-  
-      &:hover {
-        background: $accent-color;
-        color: white;
+      p {
+        font-size: 1.2rem;
+        max-width: 700px;
+        margin-bottom: 2rem;
+      }
+
+      button {
+        background: #fbbf24;
+        color: #111;
+        padding: 0.8rem 1.8rem;
+        border: none;
+        border-radius: 999px;
+        font-weight: 600;
+        font-size: 1rem;
+        cursor: pointer;
+
+        &:hover {
+          background: #e09e12;
+        }
       }
     }
   }
-  
 }
 
-.nosotros-mision-vision {
+.nosotros-info {
+  padding: 5rem 2rem;
   display: flex;
   flex-wrap: wrap;
-  min-height: 80vh;
+  gap: 2rem;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #fff;
 
-  .bloque-texto {
-    flex: 1 1 50%;
-    background: $primary-color;
-    color: white;
-    padding: 4rem;
+  .texto {
+    flex: 1 1 400px;
 
     h2 {
-      font-size: 4rem;
-      font-weight: bold;
-      margin-bottom: 2rem;
+      font-size: 2.5rem;
+      margin-bottom: 1rem;
+      color: #022c43;
     }
 
     p {
-      font-size: 1.2rem;
-      line-height: 1.6;
+      font-size: 1.1rem;
+      margin-bottom: 1rem;
+      color: #444;
     }
   }
 
-  .bloque-imagen {
-    flex: 1 1 50%;
-    background: url('../assets/nosotros/familia-playa.jpg') center/cover no-repeat;
+  .galeria {
+    flex: 1 1 500px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+
+    img {
+      width: 100%;
+      height: 180px;
+      object-fit: cover;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    }
+  }
+}
+
+.nosotros-valores {
+  padding: 4rem 2rem;
+  background: #f8fafd;
+
+  .valor-slide {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    align-items: center;
+    justify-content: center;
+
+    img {
+      width: 100%;
+      max-width: 420px;
+      border-radius: 14px;
+      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+    }
+
+    .contenido {
+      max-width: 500px;
+
+      .etiqueta {
+        background: #e0e7ff;
+        color: #3730a3;
+        font-size: 0.75rem;
+        font-weight: 600;
+        padding: 0.3rem 0.7rem;
+        border-radius: 999px;
+        display: inline-block;
+        margin-bottom: 0.5rem;
+      }
+
+      h3 {
+        font-size: 2rem;
+        margin-bottom: 1rem;
+        color: #022c43;
+      }
+
+      p {
+        font-size: 1.1rem;
+        color: #444;
+        line-height: 1.6;
+      }
+    }
+  }
+
+  .swiper-pagination-bullet {
+    background: #ccc;
+    margin-top: 1rem;
+  }
+
+  .swiper-pagination-bullet-active {
+    background: #fbbf24;
   }
 }

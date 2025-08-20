@@ -1,0 +1,27 @@
+/* src/styles/UsuarioInicio.scss */
+.usuario-inicio {
+  text-align: center;
+  padding: 2rem;
+
+  h1 {
+    font-size: 2rem;
+    color: #0066cc;
+  }
+
+  .beneficios {
+    margin-top: 2rem;
+
+    ul {
+      list-style: none;
+      padding: 0;
+
+      li {
+        background: #f0f8ff;
+        margin: 0.5rem auto;
+        padding: 1rem;
+        border-radius: 10px;
+        max-width: 500px;
+      }
+    }
+  }
+}

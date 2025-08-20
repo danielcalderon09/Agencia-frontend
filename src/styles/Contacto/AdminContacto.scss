@@ -1,0 +1,72 @@
+.admin-contacto {
+  padding: 2rem;
+  color: #222; // color general para texto
+
+  h2 {
+    margin-bottom: 2rem;
+    color: #222;
+    font-size: 1.8rem;
+  }
+
+  .mensajes-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+    gap: 1.5rem;
+  }
+
+  .mensaje-card {
+    background: #fff;
+    border-radius: 12px;
+    padding: 1.5rem;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+    border-left: 4px solid #007acc;
+    color: #222;
+
+    h3 {
+      margin-bottom: 0.5rem;
+      font-size: 1.1rem;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      color: #222;
+    }
+
+    p {
+      margin: 0.3rem 0;
+      font-size: 0.95rem;
+      color: #333;
+    }
+
+    strong {
+      color: #111;
+    }
+
+    .fecha {
+      margin-top: 1rem;
+      font-size: 0.85rem;
+      color: #777;
+      display: flex;
+      align-items: center;
+      gap: 0.4rem;
+    }
+
+    .btn-eliminar {
+      margin-top: 1rem;
+      padding: 0.5rem 1.2rem;
+      background: #e74c3c;
+      color: white;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      font-size: 0.95rem;
+      transition: background 0.3s;
+
+      &:hover {
+        background: darken(#e74c3c, 10%);
+      }
+    }
+  }
+}
